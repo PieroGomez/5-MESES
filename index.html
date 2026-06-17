@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Universo de Nosotros ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Música de fondo -->
+    <audio id="bgMusic" loop>
+        <source src="musica/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Audio final -->
+    <audio id="finalAudio">
+        <source src="musica/mensaje_final.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Pantalla de bienvenida -->
+    <section id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-content">
+            <h1>Hola amor ❤️</h1>
+
+            <p>
+                Hoy quiero invitarte a recorrer un pequeño universo.
+            </p>
+
+            <p>
+                Un universo construido con nuestros recuerdos,
+                nuestras risas, nuestros abrazos y cada momento
+                que hemos compartido durante estos cinco meses.
+            </p>
+
+            <p>
+                Quizás no sea el universo más grande...
+                pero sí el más importante para mí.
+            </p>
+
+            <button id="startBtn">
+                Comenzar el viaje ✨
+            </button>
+        </div>
+    </section>
+
+    <!-- Fondo -->
+    <div class="stars"></div>
+
+    <!-- Universo -->
+    <main id="universe" class="hidden">
+
+        <div class="top-bar">
+            <div id="progressText">
+                Recuerdos descubiertos: 0 / 9
+            </div>
+        </div>
+
+        <div class="solar-system">
+
+            <div class="center-photo">
+                <img src="fotos/fotoprincipal.jpg" alt="">
+            </div>
+
+            <!-- Recuerdo 1 -->
+            <div class="orbit orbit1">
+                <button class="star unlocked"
+                        data-id="0"
+                        data-img="foto0.5.jpg">
+                    ⭐
+                </button>
+            </div>
+
+            <!-- Recuerdo 2 -->
+            <div class="orbit orbit2">
+                <button class="star locked"
+                        data-id="1"
+                        data-img="foto1.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Recuerdo 3 -->
+            <div class="orbit orbit3">
+                <button class="star locked"
+                        data-id="2"
+                        data-img="foto2.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Recuerdo 4 -->
+            <div class="orbit orbit4">
+                <button class="star locked"
+                        data-id="3"
+                        data-img="foto3.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Recuerdo 5 -->
+            <div class="orbit orbit5">
+                <button class="star locked"
+                        data-id="4"
+                        data-img="foto4.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Recuerdo 6 -->
+            <div class="orbit orbit6">
+                <button class="star locked"
+                        data-id="5"
+                        data-img="foto5.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Recuerdo 7 -->
+            <div class="orbit orbit7">
+                <button class="star locked"
+                        data-id="6"
+                        data-img="foto6.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Recuerdo 8 -->
+            <div class="orbit orbit8">
+                <button class="star locked"
+                        data-id="7"
+                        data-img="foto7.jpg">
+                    🔒
+                </button>
+            </div>
+
+            <!-- Final -->
+            <div class="orbit orbit9">
+                <button class="star locked special-star"
+                        data-id="8"
+                        data-img="foto8.jpg">
+                    🌟
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <span id="closeModal" class="close">
+                &times;
+            </span>
+
+            <img id="modalImage" src="" alt="">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalText"></p>
+
+        </div>
+
+    </div>
+
+    <!-- Final -->
+    <section id="finalScreen" class="final-screen hidden">
+
+        <div class="final-content">
+
+            <img src="fotos/foto8.jpg" class="final-photo">
+
+            <div id="finalMessage"></div>
+
+            <button id="playVoiceBtn">
+                ▶ Escuchar último mensaje ❤️
+            </button>
+
+            <div id="endingText" class="hidden">
+
+                <div class="infinity">∞</div>
+
+                <h1>PIERO ❤️ YELIN</h1>
+
+                <p>16/01/2026 — 16/06/2026</p>
+
+                <p>"Gracias por estos 5 meses"</p>
+
+                <div class="infinity">∞</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
